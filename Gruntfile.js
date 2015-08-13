@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     },
 
     exec: {
-      build: './bin/nite-flights build'
+      build: 'nite-flights build'
     }
 
   });
