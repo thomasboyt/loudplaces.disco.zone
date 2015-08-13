@@ -1,0 +1,23 @@
+{
+  "name": "loudplaces.disco.zone",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "babel-runtime": "^5.8.20",
+    "grunt": "^0.4.5",
+    "grunt-exec": "^0.4.6",
+    "grunt-ssh": "^0.12.6",
+    "load-grunt-tasks": "^3.2.0",
+    "lodash": "^3.10.1",
+    "moment": "^2.10.6",
+    "nite-flights": "git://github.com/thomasboyt/nite-flights",
+    "react": "^0.13.3"
+  }
+}
