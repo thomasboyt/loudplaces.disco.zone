@@ -1,5 +1,6 @@
-import React from 'react';
 import moment from 'moment';
+
+import Wrapper from '../Wrapper';
 
 const DATE_STRING = 'ddd. MMMM Do, YYYY';
 
@@ -14,7 +15,7 @@ const List = React.createClass({
 
     if (post.tweets.length > 0 || post.description) {
       return (
-        <a href={post.link}>{post.title}</a>
+        <Link to="entry" params={{slug: post.slug}}>{post.title}</Link>
       );
     } else {
       return post.title;
@@ -24,7 +25,7 @@ const List = React.createClass({
   renderPosts() {
     return this.props.entries.map((post) => {
       return (
-        <li key={post.link} className="entry-box">
+        <li key={post.slug} className="entry-box">
           <h2 className="title">{this.maybeRenderLink(post)}</h2>
           <p>
             {moment(post.date, 'YYYY-MM-DD').format(DATE_STRING)}
@@ -40,13 +41,15 @@ const List = React.createClass({
 
   render() {
     return (
-      <div className="home">
-        <p>I go to lots of shows. Here are all of them.</p>
+      <Wrapper>
+        <div className="home">
+          <p>I go to lots of shows. Here are all of them.</p>
 
-        <ul>
-          {this.renderPosts()}
-        </ul>
-      </div>
+          <ul>
+            {this.renderPosts()}
+          </ul>
+        </div>
+      </Wrapper>
     );
   }
 });

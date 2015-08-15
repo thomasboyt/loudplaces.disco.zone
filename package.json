@@ -17,7 +17,6 @@
     "load-grunt-tasks": "^3.2.0",
     "lodash": "^3.10.1",
     "moment": "^2.10.6",
-    "nite-flights": "git://github.com/thomasboyt/nite-flights",
-    "react": "^0.13.3"
+    "nite-flights": "git://github.com/thomasboyt/nite-flights"
   }
 }

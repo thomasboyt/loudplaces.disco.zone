@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Page = React.createClass({
 
   propTypes: {
@@ -21,11 +19,9 @@ const Page = React.createClass({
         </head>
 
         <body>
-          <h1 className="blog-title">
-            <a href="/">Loud Places</a>
-          </h1>
-
           {this.props.children}
+
+          <script src="/js/app.bundle.js" />
         </body>
       </html>
     );
