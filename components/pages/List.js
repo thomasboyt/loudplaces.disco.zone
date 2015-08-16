@@ -2,12 +2,14 @@ import {Link} from 'react-router';
 import moment from 'moment';
 
 import Wrapper from '../Wrapper';
+import Loading from '../Loading';
 
 const DATE_STRING = 'ddd. MMMM Do, YYYY';
 
 const List = React.createClass({
 
   propTypes: {
+    isLoading: React.PropTypes.bool.isRequired,
     entries: React.PropTypes.array.isRequired
   },
 
@@ -40,6 +42,14 @@ const List = React.createClass({
   },
 
   render() {
+    const {isLoading} = this.props;
+
+    if (isLoading) {
+      return (
+        <Loading />
+      );
+    }
+
     return (
       <Wrapper>
         <div className="home">

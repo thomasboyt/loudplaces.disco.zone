@@ -1,6 +1,7 @@
 import moment from 'moment';
 
 import Wrapper from '../Wrapper';
+import Loading from '../Loading';
 import Tweet from '../Tweet';
 
 const DATE_STRING = 'ddd. MMMM Do, YYYY';
@@ -8,12 +9,8 @@ const DATE_STRING = 'ddd. MMMM Do, YYYY';
 const Post = React.createClass({
 
   propTypes: {
-    title: React.PropTypes.string.isRequired,
-    date: React.PropTypes.string.isRequired,
-    location: React.PropTypes.string.isRequired,
-    tweets: React.PropTypes.array.isRequired,
-
-    description: React.PropTypes.string,
+    isLoading: React.PropTypes.bool.isRequired,
+    entry: React.PropTypes.object
   },
 
   renderTweets(tweets) {
@@ -43,7 +40,15 @@ const Post = React.createClass({
   },
 
   render() {
-    const {title, date, tweets, location, description} = this.props;
+    const {isLoading} = this.props;
+
+    if (isLoading) {
+      return (
+        <Loading />
+      );
+    }
+
+    const {title, date, tweets, location, description} = this.props.entry;
 
     return (
       <Wrapper>
