@@ -4,6 +4,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     secret: grunt.file.readYAML('_private.yml'),
 
+    clean: ['_site/'],
+
     // TODO: This won't rm removed resources automatically!
     sftp: {
       options: {
@@ -35,10 +37,10 @@ module.exports = function(grunt) {
     },
 
     exec: {
-      build: 'nite-flights build'
+      build: 'nite-flights build --optimize'
     }
 
   });
 
-  grunt.registerTask('deploy', ['exec:build', 'sftp']);
+  grunt.registerTask('deploy', ['clean', 'exec:build', 'sftp']);
 };
