@@ -1,3 +1,4 @@
+import {Link} from 'react-router';
 import moment from 'moment';
 
 import Wrapper from '../Wrapper';

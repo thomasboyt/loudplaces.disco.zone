@@ -39,7 +39,6 @@
     'react'
   ],
   "globals": {
-    "React": false,
-    "Link": false
+    "React": true
   }
 }
