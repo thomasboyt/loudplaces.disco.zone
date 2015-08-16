@@ -9,7 +9,7 @@ const Page = React.createClass({
     return (
       <html>
         <head>
-          <title>{this.props.title}</title>
+          <title>{this.props.title} | Loud Places</title>
           <link href="http://fonts.googleapis.com/css?family=Dosis:400,500,600,700" rel="stylesheet" type="text/css" />
           <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css" />
           <link href="/normalize.css" rel="stylesheet" />
