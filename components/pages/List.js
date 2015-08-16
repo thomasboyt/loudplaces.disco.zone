@@ -13,8 +13,7 @@ const List = React.createClass({
 
   maybeRenderLink(post) {
     // Only render a link to a post if it has content (tweets, description, etc)
-
-    if (post.tweets.length > 0 || post.description) {
+    if (post.hasContent) {
       return (
         <Link to="entry" params={{slug: post.slug}}>{post.title}</Link>
       );
