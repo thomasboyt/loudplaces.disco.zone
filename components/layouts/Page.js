@@ -1,4 +1,4 @@
-import getPageTitle from './util/getPageTitle';
+import getPageTitle from '../util/getPageTitle';
 
 const Page = React.createClass({
 
