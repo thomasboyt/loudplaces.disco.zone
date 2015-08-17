@@ -1,7 +1,9 @@
+import getPageTitle from './util/getPageTitle';
+
 const Page = React.createClass({
 
   propTypes: {
-    title: React.PropTypes.string.isRequired,
+    pageTitle: React.PropTypes.string.isRequired,
     children: React.PropTypes.node.isRequired
   },
 
@@ -9,7 +11,9 @@ const Page = React.createClass({
     return (
       <html>
         <head>
-          <title>{this.props.title} | Loud Places</title>
+          {/* Used for page renders; client renders use <DocumentTitle />*/}
+          <title>{this.props.pageTitle}</title>
+
           <link href="http://fonts.googleapis.com/css?family=Dosis:400,500,600,700" rel="stylesheet" type="text/css" />
           <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css" />
           <link href="/normalize.css" rel="stylesheet" />

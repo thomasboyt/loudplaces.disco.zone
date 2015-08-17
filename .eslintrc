@@ -39,6 +39,7 @@
     'react'
   ],
   "globals": {
-    "React": true
+    "React": true,
+    "DocumentTitle": true
   }
 }

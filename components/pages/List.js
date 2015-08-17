@@ -4,6 +4,8 @@ import moment from 'moment';
 import Wrapper from '../Wrapper';
 import Loading from '../Loading';
 
+import getPageTitle from '../util/getPageTitle';
+
 const DATE_STRING = 'ddd. MMMM Do, YYYY';
 
 const List = React.createClass({
@@ -52,13 +54,15 @@ const List = React.createClass({
 
     return (
       <Wrapper>
-        <div className="home">
-          <p>I go to lots of shows. Here are all of them.</p>
+        <DocumentTitle title={getPageTitle('Home')}>
+          <div className="home">
+            <p>I go to lots of shows. Here are all of them.</p>
 
-          <ul>
-            {this.renderPosts()}
-          </ul>
-        </div>
+            <ul>
+              {this.renderPosts()}
+            </ul>
+          </div>
+        </DocumentTitle>
       </Wrapper>
     );
   }

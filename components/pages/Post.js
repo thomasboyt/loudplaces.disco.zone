@@ -4,6 +4,8 @@ import Wrapper from '../Wrapper';
 import Loading from '../Loading';
 import Tweet from '../Tweet';
 
+import getPageTitle from '../util/getPageTitle';
+
 const DATE_STRING = 'ddd. MMMM Do, YYYY';
 
 const Post = React.createClass({
@@ -52,23 +54,25 @@ const Post = React.createClass({
 
     return (
       <Wrapper>
-        <div className="entry">
-          <div className="entry-box">
-            <h1 className="title">{title}</h1>
+        <DocumentTitle title={getPageTitle(title)}>
+          <div className="entry">
+            <div className="entry-box">
+              <h1 className="title">{title}</h1>
 
-            <p>
-              {moment(date, 'YYYY-MM-DD').format(DATE_STRING)}
-              <span className="at-sign">
-                {' @ '}
-              </span>
-              <strong>{location}</strong>
-            </p>
+              <p>
+                {moment(date, 'YYYY-MM-DD').format(DATE_STRING)}
+                <span className="at-sign">
+                  {' @ '}
+                </span>
+                <strong>{location}</strong>
+              </p>
+            </div>
+
+            {this.renderDescription(description)}
+
+            {this.renderTweets(tweets)}
           </div>
-
-          {this.renderDescription(description)}
-
-          {this.renderTweets(tweets)}
-        </div>
+        </DocumentTitle>
       </Wrapper>
     );
   }
