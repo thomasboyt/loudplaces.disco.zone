@@ -12,7 +12,7 @@ const List = React.createClass({
 
   propTypes: {
     isLoading: React.PropTypes.bool.isRequired,
-    entries: React.PropTypes.array.isRequired
+    entries: React.PropTypes.array
   },
 
   maybeRenderLink(post) {
