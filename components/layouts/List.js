@@ -11,8 +11,9 @@ const DATE_STRING = 'ddd. MMMM Do, YYYY';
 const List = React.createClass({
 
   propTypes: {
+    entries: React.PropTypes.array.isRequired,
     isLoading: React.PropTypes.bool.isRequired,
-    entries: React.PropTypes.array
+    fetchError: React.PropTypes.object,
   },
 
   maybeRenderLink(post) {
@@ -27,7 +28,7 @@ const List = React.createClass({
   },
 
   renderPosts() {
-    return this.props.entries.map((post) => {
+    const posts = this.props.entries.map((post) => {
       return (
         <li key={post.slug} className="entry-box">
           <h2 className="title">{this.maybeRenderLink(post)}</h2>
@@ -41,16 +42,16 @@ const List = React.createClass({
         </li>
       );
     });
+
+    return (
+      <ul>
+        {posts}
+      </ul>
+    );
   },
 
   render() {
     const {isLoading} = this.props;
-
-    if (isLoading) {
-      return (
-        <Loading />
-      );
-    }
 
     return (
       <Wrapper>
@@ -58,9 +59,7 @@ const List = React.createClass({
           <div className="home">
             <p>I go to lots of shows. Here are all of them.</p>
 
-            <ul>
-              {this.renderPosts()}
-            </ul>
+            {!isLoading ? this.renderPosts() : <Loading />}
           </div>
         </DocumentTitle>
       </Wrapper>

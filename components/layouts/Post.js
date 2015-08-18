@@ -11,8 +11,9 @@ const DATE_STRING = 'ddd. MMMM Do, YYYY';
 const Post = React.createClass({
 
   propTypes: {
-    isLoading: React.PropTypes.bool.isRequired,
-    entry: React.PropTypes.object
+    entry: React.PropTypes.object.isRequired,
+    isHydrated: React.PropTypes.bool.isRequired,
+    fetchError: React.PropTypes.object,
   },
 
   renderTweets(tweets) {
@@ -41,16 +42,21 @@ const Post = React.createClass({
     );
   },
 
+  renderHydrated() {
+    const {tweets, description} = this.props.entry;
+
+    return (
+      <div>
+        {this.renderDescription(description)}
+        {this.renderTweets(tweets)}
+      </div>
+    );
+  },
+
   render() {
-    const {isLoading} = this.props;
+    const {isHydrated} = this.props;
 
-    if (isLoading) {
-      return (
-        <Loading />
-      );
-    }
-
-    const {title, date, tweets, location, description} = this.props.entry;
+    const {title, date, location} = this.props.entry;
 
     return (
       <Wrapper>
@@ -68,9 +74,7 @@ const Post = React.createClass({
               </p>
             </div>
 
-            {this.renderDescription(description)}
-
-            {this.renderTweets(tweets)}
+            {isHydrated ? this.renderHydrated() : <Loading />}
           </div>
         </DocumentTitle>
       </Wrapper>
