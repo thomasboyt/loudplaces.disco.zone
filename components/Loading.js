@@ -1,5 +1,3 @@
-import Wrapper from './Wrapper';
-
 const Loading = React.createClass({
   render() {
     return (

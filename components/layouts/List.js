@@ -1,7 +1,6 @@
 import {Link} from 'react-router';
 import moment from 'moment';
 
-import Wrapper from '../Wrapper';
 import Loading from '../Loading';
 
 import getPageTitle from '../util/getPageTitle';
@@ -54,15 +53,13 @@ const List = React.createClass({
     const {isLoading} = this.props;
 
     return (
-      <Wrapper>
-        <DocumentTitle title={getPageTitle('Home')}>
-          <div className="home">
-            <p>I go to lots of shows. Here are all of them.</p>
+      <DocumentTitle title={getPageTitle('Home')}>
+        <div className="home">
+          <p>I go to lots of shows. Here are all of them.</p>
 
-            {!isLoading ? this.renderPosts() : <Loading />}
-          </div>
-        </DocumentTitle>
-      </Wrapper>
+          {!isLoading ? this.renderPosts() : <Loading />}
+        </div>
+      </DocumentTitle>
     );
   }
 });

@@ -1,6 +1,5 @@
 import moment from 'moment';
 
-import Wrapper from '../Wrapper';
 import Loading from '../Loading';
 import Tweet from '../Tweet';
 
@@ -59,25 +58,23 @@ const Post = React.createClass({
     const {title, date, location} = this.props.entry;
 
     return (
-      <Wrapper>
-        <DocumentTitle title={getPageTitle(title)}>
-          <div className="entry">
-            <div className="entry-box">
-              <h1 className="title">{title}</h1>
+      <DocumentTitle title={getPageTitle(title)}>
+        <div className="entry">
+          <div className="entry-box">
+            <h1 className="title">{title}</h1>
 
-              <p>
-                {moment(date, 'YYYY-MM-DD').format(DATE_STRING)}
-                <span className="at-sign">
-                  {' @ '}
-                </span>
-                <strong>{location}</strong>
-              </p>
-            </div>
-
-            {isHydrated ? this.renderHydrated() : <Loading />}
+            <p>
+              {moment(date, 'YYYY-MM-DD').format(DATE_STRING)}
+              <span className="at-sign">
+                {' @ '}
+              </span>
+              <strong>{location}</strong>
+            </p>
           </div>
-        </DocumentTitle>
-      </Wrapper>
+
+          {isHydrated ? this.renderHydrated() : <Loading />}
+        </div>
+      </DocumentTitle>
     );
   }
 });
