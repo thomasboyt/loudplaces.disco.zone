@@ -17,11 +17,22 @@ const Post = React.createClass({
   },
 
   renderTweets(tweets) {
-    return tweets.map((tweet) => {
+    if (tweets.length === 0) {
+      return null;
+    }
+
+    const rendered = tweets.map((tweet) => {
       return (
         <Tweet tweet={tweet} key={tweet.id_str} />
       );
     });
+
+    return (
+      <div className="tweets">
+        <h3>Tweets</h3>
+        {rendered}
+      </div>
+    );
   },
 
   renderDescription(description) {
