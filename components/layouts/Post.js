@@ -2,6 +2,7 @@ import moment from 'moment';
 
 import Loading from '../Loading';
 import Tweet from '../Tweet';
+import Markdown from '../Markdown';
 
 import getPageTitle from '../util/getPageTitle';
 
@@ -28,15 +29,9 @@ const Post = React.createClass({
       return null;
     }
 
-    const paragraphs = description.split('\n\n');
-
-    const paras = paragraphs.map((paragraph, idx) => (
-      <p key={idx}>{paragraph}</p>
-    ));
-
     return (
       <div className="description">
-        {paras}
+        <Markdown source={description} />
       </div>
     );
   },
