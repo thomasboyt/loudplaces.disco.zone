@@ -22,6 +22,11 @@ const YouTubeAudio = React.createClass({
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.playing !== this.props.playing) {
+      if (!this._player) {
+        // If they player hasn't loaded yet, don't try to change playback
+        return;
+      }
+
       if (!nextProps.playing) {
         this._player.pauseVideo();
       } else {
