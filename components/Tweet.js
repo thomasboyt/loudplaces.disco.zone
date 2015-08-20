@@ -84,9 +84,6 @@ const Tweet = React.createClass({
     const {tweet} = this.props;
 
     const timestamp = moment(tweet.created_at, 'ddd MMM DD HH:mm:ss Z YYYY');
-
-    const text = this.renderText();
-
     const permalink = `https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`;
 
     return (
@@ -97,7 +94,7 @@ const Tweet = React.createClass({
           </strong>
         </a>
         {' - '}
-        {text}
+        {this.renderText()}
         <div>
           {this.renderMedia()}
         </div>
