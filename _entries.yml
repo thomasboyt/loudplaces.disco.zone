@@ -1,8 +1,21 @@
 - title: 'High on Fire / Pallbearer / Lucifer'
   location: 'Music Hall of Williamsburg'
   date: '2015-08-18'
+
   description: |
-    There's something really cathartic about a metal show.
+    I don't listen to a ton of metal. It usually requires an attention and effort that I don't give to music when I'm just listening to it day-to-day. There's a vibe and a mood that are really important.
+
+    One of the few bands I really do like is Pallbearer. The atmosphere they create on their records is awesome and terrifying. If a band like Mastodon makes the kind of metal that's played during the battle for the end of the world, Pallbearer is the music that's played when the last human alive surveys the carnage.
+
+    This didn't quite translate to this concert, of course. And I don't know, short of a ridiculous stage show there's not a lot you could do to recreate that vibe live. But it was still a fantastic set. It was immensely cathartic, just getting pummeled by sound for 50 minutes, and I was glad to be front and center(ish) for it.
+
+    I wasn't super familiar with the rest of the bill beforehand, but was pleasantly surprised. Lucifer played some great hard rock in the vein of Black Sabbath/Deep Purple, and High on Fire played an *exhausting* hour and a half set.
+
+  audio:
+    - url: https://www.youtube.com/watch?v=LTTt-ikVJSk
+      artist: Pallbearer
+      title: The Ghost I Used to Be
+
   tweets:
     - https://twitter.com/thomasABoyt/status/633805499096559616
     - https://twitter.com/thomasABoyt/status/633821543190147072
@@ -109,7 +122,7 @@
   location: Knitting Factory
   description: ''
 - date: '2015-05-19'
-  title: 'Mastodon & Clutch'
+  title: 'Mastodon / Clutch'
   location: Central Park SummerStage
   description: ''
 - date: '2015-05-08'

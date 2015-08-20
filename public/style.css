@@ -15,8 +15,34 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-.blog-title {
-  margin-bottom: 0;
+body {
+  margin-top: 60px
+}
+
+.title-container {
+  position: fixed;
+  z-index: 1000;
+
+  height: 60px;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: black;
+  border-bottom: 1px white solid;
+
+  display: flex;
+
+  /* vertical align */
+  align-items: center;
+
+  /* horizontal align */
+  justify-content: center;
+}
+
+h1.blog-title {
+  flex: 1;
 }
 
 .blog-title a, .blog-title a:visited, blog-title a:hover {
@@ -26,10 +52,6 @@ h1, h2, h3 {
 
 .home > p {
   margin-bottom: 40px;
-}
-
-.home, .entry {
-  padding-top: 20px;
 }
 
 .entry-box {
@@ -132,4 +154,41 @@ video {
 }
 .page-transition-leave.page-transition-leave-active {
   opacity: 0;
+}
+
+
+.audio-player {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  height: 60px;
+  min-width: 100px;
+
+  font-family: Dosis, sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+
+  display: flex;
+  /* vertical align */
+  align-items: center;
+
+  /* horizontal align */
+  justify-content: center;
+}
+
+.audio-player i {
+  padding-left: 15px;
+}
+
+.audio-player:hover {
+  color: black;
+  background: rgb(249, 249, 249);
+  cursor: pointer;
+}
+
+
+ul.audio-links {
+  padding-left: 0;
+  list-style-type: none;
 }

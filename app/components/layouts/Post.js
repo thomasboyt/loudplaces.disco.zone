@@ -3,6 +3,7 @@ import moment from 'moment';
 import Loading from '../Loading';
 import Tweet from '../Tweet';
 import Markdown from '../Markdown';
+import AudioLink from '../AudioLink';
 
 import getPageTitle from '../util/getPageTitle';
 
@@ -28,10 +29,12 @@ const Post = React.createClass({
     });
 
     return (
-      <div className="tweets">
+      <span>
         <h3>Tweets</h3>
-        {rendered}
-      </div>
+        <div className="tweets">
+          {rendered}
+        </div>
+      </span>
     );
   },
 
@@ -41,17 +44,46 @@ const Post = React.createClass({
     }
 
     return (
-      <div className="description">
-        <Markdown source={description} />
-      </div>
+      <span>
+        <h3>Report</h3>
+        <div className="description">
+          <Markdown source={description} />
+        </div>
+      </span>
+    );
+  },
+
+  renderAudio(audio) {
+    if (!audio) {
+      return null;
+    }
+
+    const links = audio.map((audio) => {
+      return (
+        <li key={audio.url}>
+          <AudioLink audio={audio}>
+            {audio.artist} - {audio.title}
+          </AudioLink>
+        </li>
+      );
+    });
+
+    return (
+      <span>
+        <h3>Listen</h3>
+        <ul className="audio-links">
+          {links}
+        </ul>
+      </span>
     );
   },
 
   renderHydrated() {
-    const {tweets, description} = this.props.entry;
+    const {tweets, description, audio} = this.props.entry;
 
     return (
       <div>
+        {this.renderAudio(audio)}
         {this.renderDescription(description)}
         {this.renderTweets(tweets)}
       </div>
