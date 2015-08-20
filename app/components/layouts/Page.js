@@ -17,10 +17,9 @@ const Page = React.createClass({
 
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 
-          <link href="/normalize.css" rel="stylesheet" />
-          <link href="/style.css" rel="stylesheet" />
+          <link href="/assets/app.css" rel="stylesheet" />
 
-          <script src="/js/vendor.bundle.js" />
+          <script src="/assets/vendor.bundle.js" />
 
           <script src="https://www.youtube.com/iframe_api" />
 
@@ -30,7 +29,7 @@ const Page = React.createClass({
         <body>
           {this.props.children}
 
-          <script src="/js/app.bundle.js" />
+          <script src="/assets/app.bundle.js" />
         </body>
       </html>
     );
