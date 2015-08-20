@@ -22,10 +22,6 @@ const Wrapper = React.createClass({
             {this.props.children}
           </TimeoutTransitionGroup>
         </main>
-
-        <footer>
-          (c) <a href="http://thomasboyt.com">thomas boyt</a>
-        </footer>
       </div>
     );
   }
