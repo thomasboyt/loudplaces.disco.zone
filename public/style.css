@@ -100,6 +100,11 @@ h1.blog-title {
 .home {
   max-width: 600px;
   margin: 0 auto;
+
+  /* THIS IS REQUIRED FOR REASONS I DO NOT UNDERSTAND :(
+   * Without it, the page will get pushed down a bit during navigation transitions
+   */
+  padding-top: 10px;
 }
 
 .home ul {
