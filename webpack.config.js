@@ -2,6 +2,7 @@
  * Custom webpack config that gets merged into default nite-flights config
  */
 
+import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 import autoprefixer from 'autoprefixer';
@@ -20,6 +21,11 @@ export default {
     ]
   },
 
+  plugins: [
+    new ExtractTextPlugin('[name].css'),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+  ],
+
   module: {
     loaders: [
       {
@@ -31,9 +37,5 @@ export default {
 
   postcss: function () {
     return [postcssImport, autoprefixer, precss];
-  },
-
-  plugins: [
-    new ExtractTextPlugin('[name].css')
-  ]
+  }
 };
