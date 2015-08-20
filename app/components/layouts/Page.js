@@ -1,5 +1,3 @@
-import getPageTitle from '../util/getPageTitle';
-
 const Page = React.createClass({
 
   propTypes: {
@@ -25,6 +23,8 @@ const Page = React.createClass({
           <script src="/js/vendor.bundle.js" />
 
           <script src="https://www.youtube.com/iframe_api" />
+
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         </head>
 
         <body>
