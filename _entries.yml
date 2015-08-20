@@ -28,6 +28,18 @@
 - title: 'Vince Staples / Lil Herb / Loaf Muzik'
   location: 'The Shop'
   date: '2015-08-11'
+
+  description: |
+    A tiny show in a BBQ joint. People standing on tables to see; the floor was way too packed to move without stepping on feet. When he did Blue Suede I lost a shoe. It was awesome.
+
+  audio:
+    - url: https://www.youtube.com/watch?v=s1KCyCv34cg
+      artist: Vince Staples
+      title: Senorita
+    - url: https://www.youtube.com/watch?v=NJLfCBBcZAo
+      artist: Vince Staples
+      title: Blue Suede
+
   tweets:
     - https://twitter.com/thomasABoyt/status/630870421420797952
     - https://twitter.com/thomasABoyt/status/630884636407820288
@@ -39,6 +51,15 @@
 - title: 'Jamie xx'
   location: 'Terminal 5'
   date: '2015-08-08'
+
+  description: |
+    Don't see DJ sets at venues like Terminal 5. Just don't. Too packed to dance, not much to look at. He played a good, long set though, I'll give him that.
+
+  audio:
+    - url: https://www.youtube.com/watch?v=TP9luRtEqjc
+      artist: Jamie xx
+      title: Loud Places
+
   tweets:
     - https://twitter.com/thomasABoyt/status/630195574466347008
     - https://twitter.com/thomasABoyt/status/630238098820042752
