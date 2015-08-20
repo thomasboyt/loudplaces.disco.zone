@@ -1,5 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {playAudio} from '../actions/audio';
+
+import YouTubeAudio from './YouTubeAudio';
 
 const AudioPlayer = React.createClass({
   propTypes: {
@@ -33,6 +36,10 @@ const AudioPlayer = React.createClass({
     });
   },
 
+  handleEnded() {
+    this.props.dispatch(playAudio(null));
+  },
+
   renderAction() {
     if (this.state.playing) {
       return (
@@ -58,6 +65,12 @@ const AudioPlayer = React.createClass({
           &#9835;
           {this.renderAction()}
         </div>
+
+        <YouTubeAudio
+          playing={this.state.playing}
+          url={audio.url}
+          onEnded={this.handleEnded}
+          />
       </div>
     );
   }

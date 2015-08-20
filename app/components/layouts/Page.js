@@ -23,6 +23,8 @@ const Page = React.createClass({
           <link href="/style.css" rel="stylesheet" />
 
           <script src="/js/vendor.bundle.js" />
+
+          <script src="https://www.youtube.com/iframe_api" />
         </head>
 
         <body>
