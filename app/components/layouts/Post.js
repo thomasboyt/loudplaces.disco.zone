@@ -61,17 +61,9 @@ const Post = React.createClass({
     const links = audio.map((audio) => {
       return (
         <li key={audio.url}>
-          <i className="fa fa-play" />
-
-          &nbsp;&nbsp;
-
           <AudioLink audio={audio}>
             {audio.artist} - {audio.title}
           </AudioLink>
-
-          &nbsp;
-
-          (<a href={audio.url}>via</a>)
         </li>
       );
     });
