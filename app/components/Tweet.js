@@ -1,7 +1,7 @@
 import moment from 'moment';
 import Video from './Video';
 
-import parseTweetText from './util/parseTweetText';
+import parseTweetText from '../util/parseTweetText';
 
 const Tweet = React.createClass({
 

@@ -36,6 +36,16 @@ export default {
   },
 
   postcss: function () {
-    return [postcssImport, autoprefixer, precss];
+    const watchCfg = {
+      onImport: function(files) {
+        files.forEach(this.addDependency);
+      }.bind(this)
+    };
+
+    return [
+      postcssImport(watchCfg),
+      autoprefixer,
+      precss
+    ];
   }
 };

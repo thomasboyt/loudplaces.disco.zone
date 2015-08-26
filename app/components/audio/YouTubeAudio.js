@@ -6,7 +6,15 @@ import queryString from 'query-string';
 const YouTubeAudio = React.createClass({
   propTypes: {
     playing: React.PropTypes.bool.isRequired,
-    url: React.PropTypes.string.isRequired
+    volume: React.PropTypes.number,
+    url: React.PropTypes.string.isRequired,
+    onEnded: React.PropTypes.func
+  },
+
+  getDefaultProps() {
+    return {
+      volume: 0
+    };
   },
 
   componentDidMount() {
@@ -33,13 +41,16 @@ const YouTubeAudio = React.createClass({
         this._player.playVideo();
       }
     }
+
+    if (nextProps.volume !== this.props.volume) {
+      this._player.setVolume(nextProps.volume);
+    }
   },
 
   onPlayerReady(evt) {
     this._player = evt.target;
 
-    // TODO: add volume slider and don't use this
-    this._player.setVolume(50);
+    this._player.setVolume(this.props.volume);
 
     if (this.props.playing) {
       this._player.playVideo();

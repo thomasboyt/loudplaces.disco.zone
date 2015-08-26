@@ -1,6 +1,6 @@
 import {Link} from 'react-router';
 import TimeoutTransitionGroup from 'timeout-transition-group';
-import AudioPlayer from '../AudioPlayer';
+import AudioPlayer from '../audio/AudioPlayer';
 
 const Wrapper = React.createClass({
   render() {

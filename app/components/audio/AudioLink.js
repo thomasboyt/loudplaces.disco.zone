@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {playAudio} from '../actions/audio';
-import canPlayYoutubeAudio from './util/canPlayYoutubeAudio';
+import {playAudio} from '../../actions/audio';
+import canPlayYoutubeAudio from '../../util/canPlayYoutubeAudio';
 
 const AudioLink = React.createClass({
   propTypes: {
@@ -22,11 +22,9 @@ const AudioLink = React.createClass({
     // the server checksum but is then re-rendered with client-side capabilities
     // I know, this is a bummer :(
 
-    /* eslint-disable react/no-did-mount-set-state */
     this.setState({
       canPlayYoutubeAudio: canPlayYoutubeAudio()
     });
-    /* eslint-enable react/no-did-mount-set-state */
   },
 
   handleClick() {

@@ -187,21 +187,63 @@ video {
   font-size: 28px;
 
   display: flex;
+
   /* vertical align */
   align-items: center;
 
   /* horizontal align */
   justify-content: center;
+
+  line-height: 60px;
 }
 
-.audio-player i {
-  padding-left: 15px;
+.audio-player i, .audio-player .icon {
+  line-height: 60px;
 }
 
-.audio-player:hover {
+.audio-control {
+  width: 50px;
+  cursor: default;
+  position: relative;
+}
+
+.audio-control.interactive:hover {
   color: black;
   background: rgb(249, 249, 249);
   cursor: pointer;
+}
+
+.audio-player .volume .slider {
+  /* display: none; */
+  position: absolute;
+  top: 60px;
+  background: black;
+  color: white;
+  width: 50px;
+  border-left: 1px white solid;
+  border-bottom: 1px white solid;
+
+  overflow-y: hidden;
+  max-height: 0px;
+
+  transition-property: max-height;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.4,0.0,1,1);
+}
+
+.audio-control:hover .volume .slider {
+  /* display: block; */
+  max-height: 150px;
+}
+
+.volume-input-container {
+  padding: 10px 0px;
+}
+
+.volume-input {
+  -webkit-appearance: slider-vertical;
+  writing-mode: bt-lr;
+  width: 20px;
 }
 
 

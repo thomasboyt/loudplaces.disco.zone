@@ -3,7 +3,7 @@ import moment from 'moment';
 
 import Loading from '../Loading';
 
-import getPageTitle from '../util/getPageTitle';
+import getPageTitle from '../../util/getPageTitle';
 
 const DATE_STRING = 'ddd. MMMM Do, YYYY';
 
