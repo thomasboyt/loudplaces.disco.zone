@@ -4,6 +4,13 @@ const MEDIA_TYPE = 'media';
 const MENTION_TYPE = 'user_mentions';
 const URL_TYPE = 'urls';
 
+function decodeEscapedEntities(text) {
+  text = text.replace('&lt;', '<');
+  text = text.replace('&gt;', '>');
+  text = text.replace('&amp;', '&');
+  return text;
+}
+
 /*
  * This function "expands" a Tweet into a better-reading version. This includes:
  *
@@ -38,7 +45,7 @@ export default function transformTweetText(text, entities) {
 
     // Add anything before this token into the list
     const before = text.slice(lastIdx, startIdx);
-    tokens.push(before);
+    tokens.push(decodeEscapedEntities(before));
 
     // Add this entity into the list
     let entityContent;
@@ -63,7 +70,7 @@ export default function transformTweetText(text, entities) {
 
     } else {
       // hashtags, symbols, etc. we ignore for now
-      entityContent = text.slice(startIdx, endIdx);
+      entityContent = decodeEscapedEntities(text.slice(startIdx, endIdx));
     }
 
     tokens.push(entityContent);
@@ -74,7 +81,7 @@ export default function transformTweetText(text, entities) {
   // Add any leftover text
   const after = text.slice(lastIdx);
   if (after.length > 0) {
-    tokens.push(after);
+    tokens.push(decodeEscapedEntities(after));
   }
 
   return tokens;
