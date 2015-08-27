@@ -142,10 +142,31 @@
   title: Todd Terje
   location: Terminal 5
   description: ''
+
 - date: '2015-07-18'
-  title: PC Music
+  title: PC Music (A.G. Cook / Danny L Harle) / The Range
   location: "Baby's All Right"
-  description: ''
+
+  audio:
+    - title: Beautiful
+      artist: AG Cook
+      url: https://www.youtube.com/watch?v=YG0ggHM1PLM
+    - title: In My Dreams
+      artist: Danny L Harle
+      url: https://www.youtube.com/watch?v=fn7NT1dbem4
+    - title: The One
+      artist: The Range
+      url: https://www.youtube.com/watch?v=HyOdix_Ndo0
+
+  description: |
+    PC Music again! This time, in a far less crazy environment. This was just a solid set of DJs.
+
+    I was super excited to find The Range had been added to the bill. I recognized the name when I saw the set list, but couldn't place it until he played one of my favorite tracks, "The One," which is an absolute gem.
+
+    I don't remember a ton of the PC Music sets, other than that they were very good, and I had a lot of fun dancing. I do remember both AG Cook and Danny L Harle had similar graphics to what they were using at Pop Cube, but the sets seemed a tad more experimental. They used the longer lengths of their sets mostly to tease out their biggest tracks.
+    
+    Also, at one point, I danced with [QT](https://en.wikipedia.org/wiki/QT_(musician)), which blew my goddamn mind. She was moving through the crowd like some kind of alien party magician, dancing with everyone, and I loved it.
+
 - date: '2015-07-17'
   title: Ratatat
   location: Webster Hall
