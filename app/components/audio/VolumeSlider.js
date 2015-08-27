@@ -15,7 +15,7 @@ const VolumeSlider = React.createClass({
 
         <div className="slider">
           <div className="volume-input-container">
-            <input type="range" className="volume-input" orient="vertical"
+            <input type="range" className="volume-input"
               min="0" max="100" step="1"
               value={this.props.volume} onChange={this.handleChange} />
           </div>

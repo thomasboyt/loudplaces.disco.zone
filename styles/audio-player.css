@@ -1,0 +1,122 @@
+.audio-player {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  height: 60px;
+  min-width: 100px;
+
+  font-family: Dosis, sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+
+  display: flex;
+
+  /* vertical align */
+  align-items: center;
+
+  /* horizontal align */
+  justify-content: center;
+
+  line-height: 60px;
+}
+
+.audio-player i, .audio-player .icon {
+  line-height: 60px;
+}
+
+.audio-control {
+  width: 50px;
+  cursor: default;
+  position: relative;
+}
+
+.audio-control.interactive:hover {
+  color: black;
+  background: rgb(249, 249, 249);
+  cursor: pointer;
+}
+
+
+/*
+ * Volume input
+ */
+
+.audio-player .volume .slider {
+  position: absolute;
+  top: 60px;
+  background: black;
+  color: white;
+  width: 50px;
+  border-left: 1px white solid;
+  border-bottom: 1px white solid;
+
+  overflow-y: hidden;
+  height: 0px;
+
+  transition-property: height;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.4,0.0,1,1);
+}
+
+.audio-control:hover .volume .slider {
+  height: 150px;
+}
+
+.volume-input-container {
+  padding: 10px 0px;
+}
+
+.volume-input {
+  width: 130px;
+  transform: rotate(270deg);
+
+  /* TODO: These numbers are really annoying to hardcode */
+  margin-top: 60px;
+  margin-left: -41px;
+
+  border-radius: 0px;
+  background: rgb(249, 249, 249);
+  border: none;
+  height: 5px;
+}
+
+.volume-input:focus {
+  outline: 0;
+}
+
+/* Webkit overrides */
+
+.volume-input {
+  -webkit-appearance: none;
+}
+
+.volume-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-left: -5px;  /* this is a child of the track, so this "re-centers" it */
+  width: 15px;
+  height: 15px;
+  background: black;
+  border: 1px white solid;
+  border-radius: 0px;
+}
+
+/* Firefox overrides */
+
+.volume-input::-moz-range-track {
+  border-radius: 0px;
+  background: rgb(249, 249, 249);
+  border: none;
+  height: 5px;
+}
+
+.volume-input::-moz-range-thumb {
+  margin-left: -5px;  /* this is a child of the track, so this "re-centers" it */
+  width: 15px;
+  height: 15px;
+  background: black;
+  border: 1px white solid;
+  border-radius: 0px;
+}
+
+/* TODO: Internet Explorer overrides go here */
