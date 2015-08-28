@@ -2,7 +2,7 @@
   position: absolute;
 
   top: 0;
-  right: 0;
+  right: 10px;
   height: 60px;
   min-width: 100px;
 
@@ -37,6 +37,46 @@
   cursor: pointer;
 }
 
+/*
+ * Music info slide-out
+ */
+
+.audio-player .info .slider {
+  background: rgb(249, 249, 249);
+
+  position: absolute;
+  right: 100%;
+  top: 0;
+  font: 14px "Open Sans", sans-serif;
+  text-transform: none;
+  overflow: hidden;
+  text-align: left;
+
+  /* v-align dat */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60px;
+
+  white-space: nowrap;
+
+  padding: 0;
+  width: 0;
+
+  transition-property: width;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(0.4,0.0,1,1);
+}
+
+.audio-control:hover .info .slider {
+  width: 240px;
+  padding: 0 10px;
+}
+
+.audio-player .info .slider > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 /*
  * Volume input
@@ -48,6 +88,7 @@
   background: black;
   color: white;
   width: 50px;
+  border-right: 1px white solid;
   border-left: 1px white solid;
   border-bottom: 1px white solid;
 

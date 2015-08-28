@@ -46,7 +46,7 @@ header {
   right: 0;
 
   background: black;
-  border-bottom: 1px white solid;
+  border-bottom: 1px rgb(249, 249, 249) solid;
 
   display: flex;
 

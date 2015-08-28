@@ -4,6 +4,7 @@ import {playAudio} from '../../actions/audio';
 
 import YouTubeAudio from './YouTubeAudio';
 import VolumeSlider from './VolumeSlider';
+import InfoSlider from './InfoSlider';
 
 const VOLUME_KEY = 'volume';
 
@@ -54,6 +55,10 @@ const AudioPlayer = React.createClass({
   },
 
   toggleStatus() {
+    if (!this.props.audio) {
+      return;
+    }
+
     this.setState({
       playing: !this.state.playing
     });
@@ -72,46 +77,54 @@ const AudioPlayer = React.createClass({
   },
 
   renderAction() {
-    if (this.state.playing) {
-      return (
-        <i className="fa fa-pause" />
-      );
-    } else {
-      return (
-        <i className="fa fa-play" />
-      );
+    if (!this.props.audio) {
+      return null;
     }
+
+    let className;
+    if (this.state.playing) {
+      className = 'fa fa-pause';
+    } else {
+      className = 'fa fa-play';
+    }
+
+    return (
+      <div className="audio-control interactive" onClick={this.toggleStatus}>
+        <i className={className} />
+      </div>
+    );
+  },
+
+  renderEmbed() {
+    if (!this.props.audio) {
+      return null;
+    }
+
+    return (
+      <YouTubeAudio
+        playing={this.state.playing}
+        volume={this.state.volume}
+        url={this.props.audio.url}
+        onEnded={this.handleEnded} />
+    );
   },
 
   render() {
     const {audio} = this.props;
 
-    if (!audio) {
-      return null;
-    }
-
     return (
       <div className="audio-player">
-        <div className="audio-control">
-          <span className="icon">
-            &#9835;
-          </span>
+        <div className="audio-control interactive">
+          <InfoSlider audio={audio} />
         </div>
 
-        <div className="audio-control interactive" onClick={this.toggleStatus}>
-          {this.renderAction()}
-        </div>
+        {this.renderAction()}
 
         <div className="audio-control interactive">
           <VolumeSlider volume={this.state.volume} onChange={this.handleVolumeChange} />
         </div>
 
-        <YouTubeAudio
-          playing={this.state.playing}
-          volume={this.state.volume}
-          url={audio.url}
-          onEnded={this.handleEnded}
-          />
+        {this.renderEmbed()}
       </div>
     );
   }
