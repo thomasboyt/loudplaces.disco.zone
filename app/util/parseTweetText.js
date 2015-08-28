@@ -34,7 +34,7 @@ export default function transformTweetText(text, entities) {
       .value();
 
   if (entitiesList.length === 0) {
-    return text;
+    return decodeEscapedEntities(text);
   }
 
   const tokens = [];
