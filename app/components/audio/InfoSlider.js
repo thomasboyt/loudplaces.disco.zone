@@ -1,6 +1,6 @@
 const InfoSlider = React.createClass({
   propTypes: {
-    audio: React.PropTypes.object.isRequired
+    audio: React.PropTypes.object
     // TODO: Get some info from Youtub...
   },
 
