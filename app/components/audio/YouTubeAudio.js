@@ -35,9 +35,16 @@ const YouTubeAudio = React.createClass({
   },
 
   componentWillReceiveProps(nextProps) {
+    if (!this._player) {
+      // If the player hasn't loaded yet, don't try to change anything
+      return;
+    }
+
     if (nextProps.playing !== this.props.playing) {
-      if (!this._player) {
-        // If they player hasn't loaded yet, don't try to change playback
+      if (nextProps.url !== this.props.url) {
+        // If we're about to change to a new song (& new iframe content), don't toggle playback.
+        // The new iframe will cause the YouTube player onReady() event to refire, so we'll start
+        // playing in the onPlayerReady() hook
         return;
       }
 
