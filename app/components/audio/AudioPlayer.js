@@ -20,6 +20,8 @@ const AudioPlayer = React.createClass({
 
   getInitialState() {
     return {
+      duration: null,
+      elapsed: null,
       playing: false,
       volume: 100  // TODO: remember from localStorage? redux store?
     };
@@ -43,13 +45,17 @@ const AudioPlayer = React.createClass({
     if (!nextProps.audio) {
       // If audio is unset, stop playing
       this.setState({
-        playing: false
+        playing: false,
+        duration: null,
+        elapsed: null
       });
 
     } else if (!this.props.audio || (nextProps.audio.url !== this.props.audio.url)) {
       // If audio has changed, start playing
       this.setState({
-        playing: true
+        playing: true,
+        duration: null,
+        elapsed: null
       });
     }
   },
@@ -61,6 +67,21 @@ const AudioPlayer = React.createClass({
 
     this.setState({
       playing: !this.state.playing
+    });
+  },
+
+  handleReady(info) {
+    const {duration, elapsed} = info;
+
+    this.setState({
+      duration,
+      elapsed
+    });
+  },
+
+  handleElapsedTick(elapsed) {
+    this.setState({
+      elapsed
     });
   },
 
@@ -105,6 +126,8 @@ const AudioPlayer = React.createClass({
         playing={this.state.playing}
         volume={this.state.volume}
         url={this.props.audio.url}
+        onReady={this.handleReady}
+        onTick={this.handleElapsedTick}
         onEnded={this.handleEnded} />
     );
   },
@@ -115,7 +138,8 @@ const AudioPlayer = React.createClass({
     return (
       <div className="audio-player">
         <div className="audio-control interactive">
-          <InfoSlider audio={audio} />
+          <InfoSlider audio={audio}
+            duration={this.state.duration} elapsed={this.state.elapsed} />
         </div>
 
         {this.renderAction()}

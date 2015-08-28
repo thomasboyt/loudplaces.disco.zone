@@ -8,6 +8,8 @@ const YouTubeAudio = React.createClass({
     playing: React.PropTypes.bool.isRequired,
     volume: React.PropTypes.number,
     url: React.PropTypes.string.isRequired,
+    onReady: React.PropTypes.func,
+    onTick: React.PropTypes.func,
     onEnded: React.PropTypes.func
   },
 
@@ -26,6 +28,10 @@ const YouTubeAudio = React.createClass({
         onStateChange: (e) => this.onStateChange(e)
       }
     });
+  },
+
+  componentWillUnmount() {
+    this.removeTicker();
   },
 
   componentWillReceiveProps(nextProps) {
@@ -47,6 +53,24 @@ const YouTubeAudio = React.createClass({
     }
   },
 
+  _ticker: null,
+
+  installTicker() {
+    // TODO:
+    // getCurrentTime breaks if Chromecast is enabled, shouldn't rely on it if possible
+    this._ticker = setInterval(() => {
+      const timeSec = this._player.getCurrentTime();
+      const rounded = Math.round(timeSec);
+      this.props.onTick(rounded);
+    }, 200);
+  },
+
+  removeTicker() {
+    if (this._ticker) {
+      clearInterval(this._ticker);
+    }
+  },
+
   onPlayerReady(evt) {
     this._player = evt.target;
 
@@ -55,6 +79,17 @@ const YouTubeAudio = React.createClass({
     if (this.props.playing) {
       this._player.playVideo();
     }
+
+    if (this.props.onReady) {
+      this.props.onReady({
+        duration: this._player.getDuration(),
+        elapsed: this._player.getCurrentTime()
+      });
+    }
+
+    if (this.props.onTick) {
+      this.installTicker();
+    }
   },
 
   onStateChange(evt) {
@@ -62,6 +97,8 @@ const YouTubeAudio = React.createClass({
       if (this.props.onEnded) {
         this.props.onEnded();
       }
+
+      this.removeTicker();
     }
   },
 
