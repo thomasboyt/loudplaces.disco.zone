@@ -1,3 +1,5 @@
+@import './vars.css';
+
 /*
  * Common
  */
@@ -46,7 +48,7 @@ header {
   right: 0;
 
   background: black;
-  border-bottom: 1px rgb(249, 249, 249) solid;
+  border-bottom: 1px $off-white solid;
 
   display: flex;
 
@@ -72,7 +74,7 @@ h1.blog-title {
 
 .entry-box {
   color: black;
-  background: rgb(249, 249, 249);
+  background: $off-white;
 
   /* little less due to line-height on h2 */
   padding-top: 18px;
@@ -150,12 +152,16 @@ video {
 }
 
 
-.page-transition-enter {
+@define-extend page-transition {
   transition: opacity .5s ease-in-out;
-  opacity: 0;
   position: absolute;
   left: 0;
   right: 0;
+}
+
+.page-transition-enter {
+  @extend page-transition;
+  opacity: 0;
 }
 
 .page-transition-enter.page-transition-enter-active {
@@ -163,11 +169,8 @@ video {
 }
 
 .page-transition-leave {
-  transition: opacity .5s ease-in-out;
+  @extend page-transition;
   opacity: 1;
-  position: absolute;
-  left: 0;
-  right: 0;
 }
 .page-transition-leave.page-transition-leave-active {
   opacity: 0;

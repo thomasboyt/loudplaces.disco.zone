@@ -1,3 +1,5 @@
+@import './vars.css';
+
 .audio-player {
   position: absolute;
 
@@ -33,7 +35,7 @@
 
 .audio-control.interactive:hover {
   color: black;
-  background: rgb(249, 249, 249);
+  background: $off-white;
   cursor: pointer;
 }
 
@@ -42,7 +44,7 @@
  */
 
 .audio-player .info .slider {
-  background: rgb(249, 249, 249);
+  background: $off-white;
 
   position: absolute;
   right: 100%;
@@ -113,19 +115,28 @@
   width: 130px;
   height: 6px;
   transform: rotate(270deg);
-  -webkit-transform-origin: 50%  51%;
 
   /* TODO These numbers are really annoying to hardcode */
   margin-top: 60px;
   margin-left: -41px;
 
   border-radius: 0px;
-  background: rgb(249, 249, 249);
+  background: $off-white;
   border: none;
 }
 
 .volume-input:focus {
   outline: 0;
+}
+
+@define-mixin volume-thumb {
+  -webkit-appearance: none;
+  margin-left: -5px;  /* this is a child of the track, so this "re-centers" it */
+  width: 15px;
+  height: 15px;
+  background: black;
+  border: 1px white solid;
+  border-radius: 0px;
 }
 
 /* Webkit overrides */
@@ -135,31 +146,20 @@
 }
 
 .volume-input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  margin-left: -5px;  /* this is a child of the track, so this "re-centers" it */
-  width: 15px;
-  height: 15px;
-  background: black;
-  border: 1px white solid;
-  border-radius: 0px;
+  @mixin volume-thumb;
 }
 
 /* Firefox overrides */
 
 .volume-input::-moz-range-track {
   border-radius: 0px;
-  background: rgb(249, 249, 249);
+  background: $off-white;
   border: none;
   height: 5px;
 }
 
 .volume-input::-moz-range-thumb {
-  margin-left: -5px;  /* this is a child of the track, so this "re-centers" it */
-  width: 15px;
-  height: 15px;
-  background: black;
-  border: 1px white solid;
-  border-radius: 0px;
+  @mixin volume-thumb;
 }
 
 /* TODO: Internet Explorer overrides go here */
