@@ -68,17 +68,19 @@
 }
 
 .volume-input {
+  /* keep w x h even by even or odd by odd, or rotate will be blurry */
   width: 130px;
+  height: 6px;
   transform: rotate(270deg);
+  -webkit-transform-origin: 50%  51%;
 
-  /* TODO: These numbers are really annoying to hardcode */
+  /* TODO These numbers are really annoying to hardcode */
   margin-top: 60px;
   margin-left: -41px;
 
   border-radius: 0px;
   background: rgb(249, 249, 249);
   border: none;
-  height: 5px;
 }
 
 .volume-input:focus {
