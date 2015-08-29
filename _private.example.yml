@@ -1,6 +1,5 @@
 twitter_api_key:
 twitter_api_secret:
 
-ssh_username:
-ssh_host:
-ssh_path:
+rsync_host: foo@bar.com
+rsync_dest: /home/foo/loudplaces
