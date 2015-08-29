@@ -6,32 +6,24 @@ module.exports = function(grunt) {
 
     clean: ['_site/'],
 
-    // TODO: This won't rm removed resources automatically!
-    sftp: {
+    rsync: {
       options: {
-        path: '<%= secret.ssh_path %>',
-        host: '<%= secret.ssh_host %>',
-        username: '<%= secret.ssh_username %>',
-        agent: process.env.SSH_AUTH_SOCK,
-        showProgress: true,
-        createDirectories: true
+        host: '<%= secret.rsync_host %>',
+        args: ['--verbose', '--compress'],
+        recursive: true
       },
 
-      posts: {
+      site: {
         options: {
-          srcBasePath: '_site/',
-        },
-        files: {
-          './': ['_site/**']
+          src: '_site/',
+          dest: '<%= secret.rsync_dest %>',
         }
       },
 
       public: {
         options: {
-          srcBasePath: 'public/',
-        },
-        files: {
-          './': ['public/**']
+          src: 'public/',
+          dest: '<%= secret.rsync_dest %>',
         }
       }
     },
@@ -42,5 +34,5 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('deploy', ['clean', 'exec:build', 'sftp']);
+  grunt.registerTask('deploy', ['clean', 'exec:build', 'rsync']);
 };
