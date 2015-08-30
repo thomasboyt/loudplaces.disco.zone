@@ -1,5 +1,6 @@
 import moment from 'moment';
 import Video from './Video';
+import Photo from './Photo';
 
 import parseTweetText from '../util/parseTweetText';
 
@@ -71,9 +72,7 @@ const Tweet = React.createClass({
 
     return media.map((media) => {
       if (media.type === 'photo') {
-        return (
-          <img src={`${media.media_url_https}:small`} key={media.id_str} />
-        );
+        return <Photo media={media} key={media.id_str} />;
       } else if (media.type === 'video') {
         return <Video media={media} key={media.id_str} />;
       }
