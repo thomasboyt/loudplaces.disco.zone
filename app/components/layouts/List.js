@@ -1,11 +1,9 @@
 import {Link} from 'react-router';
-import moment from 'moment';
 
 import Loading from '../Loading';
+import MetaInfo from '../MetaInfo';
 
 import getPageTitle from '../../util/getPageTitle';
-
-const DATE_STRING = 'ddd. MMMM Do, YYYY';
 
 const List = React.createClass({
 
@@ -31,13 +29,7 @@ const List = React.createClass({
       return (
         <li key={post.slug} className="entry-box">
           <h2 className="title">{this.maybeRenderLink(post)}</h2>
-          <p>
-            {moment(post.date, 'YYYY-MM-DD').format(DATE_STRING)}
-            <span className="at-sign">
-              {' @ '}
-            </span>
-            <strong>{post.location}</strong>
-          </p>
+          <MetaInfo post={post} />
         </li>
       );
     });

@@ -1,13 +1,10 @@
-import moment from 'moment';
-
 import Loading from '../Loading';
+import MetaInfo from '../MetaInfo';
 import Tweet from '../Tweet';
 import Markdown from '../Markdown';
 import AudioLink from '../audio/AudioLink';
 
 import getPageTitle from '../../util/getPageTitle';
-
-const DATE_STRING = 'ddd. MMMM Do, YYYY';
 
 const Post = React.createClass({
 
@@ -92,8 +89,7 @@ const Post = React.createClass({
 
   render() {
     const {isHydrated} = this.props;
-
-    const {title, date, location} = this.props.entry;
+    const {title} = this.props.entry;
 
     return (
       <DocumentTitle title={getPageTitle(title)}>
@@ -101,13 +97,7 @@ const Post = React.createClass({
           <div className="entry-box">
             <h1 className="title">{title}</h1>
 
-            <p>
-              {moment(date, 'YYYY-MM-DD').format(DATE_STRING)}
-              <span className="at-sign">
-                {' @ '}
-              </span>
-              <strong>{location}</strong>
-            </p>
+            <MetaInfo post={this.props.entry} />
           </div>
 
           {isHydrated ? this.renderHydrated() : <Loading />}
