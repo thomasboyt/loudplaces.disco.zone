@@ -199,6 +199,15 @@
   title: White Lung
   location: Knitting Factory
   description: ''
+
+- date: '2015-06-04'
+  title: Benjamin Booker
+  location: Irving Plaza
+
+- date: '2015-06-04'
+  title: You're the Expert
+  location: Le Poisson Rouge
+
 - date: '2015-05-19'
   title: 'Mastodon / Clutch'
   location: Central Park SummerStage
