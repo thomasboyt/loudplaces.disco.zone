@@ -1,5 +1,15 @@
 import Modal from 'react-modal';
 
+// <3 react-router
+// https://github.com/rackt/react-router/blob/0.13.x/modules/components/Link.js#L5-L11
+function isLeftClickEvent(event) {
+  return event.button === 0;
+}
+
+function isModifiedEvent(event) {
+  return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
+}
+
 const Photo = React.createClass({
   propTypes: {
     media: React.PropTypes.object.isRequired
@@ -12,7 +22,11 @@ const Photo = React.createClass({
   },
 
   handleRequestOpen(e) {
-    e.preventDefault();  // TODO: does this let cmd+click work?
+    if (isModifiedEvent(e) || !isLeftClickEvent(e)) {
+      return;
+    }
+
+    e.preventDefault();
 
     this.setState({
       expanded: true
