@@ -1,0 +1,28 @@
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.ReactModal__Overlay {
+  z-index: 5000;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 3%;
+}
+
+.ReactModal__Content:focus {
+  outline: none;
+}
+
+.zoom-img-container {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.zoom-img-container .media-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

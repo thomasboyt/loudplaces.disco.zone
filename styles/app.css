@@ -4,11 +4,12 @@
  * Common
  */
 
-html {
-  overflow-y: scroll;
-}
+/* html { */
+/*   overflow-y: scroll; */
+/* } */
 
 body {
+  overflow-y: scroll;
   text-align: center;
   background: black;
   color: white;
@@ -26,6 +27,10 @@ a, a:visited, a:hover {
   color: white;
 }
 
+a:focus, a:active {
+  outline: none;
+}
+
 .container {
   display: flex;
   min-height: 100vh;
@@ -34,14 +39,14 @@ a, a:visited, a:hover {
 
 main {
   flex: 1;
-  margin-top: 60px
+  margin-top: $header-height;
 }
 
 header {
   position: fixed;
   z-index: 1000;
 
-  height: 60px;
+  height: $header-height;
   margin: 0;
   top: 0;
   left: 0;
@@ -146,7 +151,7 @@ h1.blog-title {
   text-align: justify;
 }
 
-img {
+.entry img {
   max-height: 250px;
   max-width: 400px;
   padding: 0px 5px;
