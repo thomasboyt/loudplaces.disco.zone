@@ -86,18 +86,18 @@ const Tweet = React.createClass({
     const permalink = `https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`;
 
     return (
-      <p>
-        <a href={permalink}>
-          <strong>
-            {timestamp.format('hh:mm:ss a')}
-          </strong>
-        </a>
-        {' - '}
-        {this.renderText()}
-        <div>
-          {this.renderMedia()}
-        </div>
-      </p>
+      <div>
+        <p>
+          <a href={permalink}>
+            <strong>
+              {timestamp.format('hh:mm:ss a')}
+            </strong>
+          </a>
+          <br/>
+          {this.renderText()}
+        </p>
+        {this.renderMedia()}
+      </div>
     );
   }
 });

@@ -6,6 +6,7 @@
   z-index: 5000;
   background: rgba(0, 0, 0, 0.7);
   padding: 3%;
+  cursor: pointer;
 }
 
 .ReactModal__Content:focus {
