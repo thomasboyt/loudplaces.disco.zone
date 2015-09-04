@@ -9,7 +9,7 @@ import getPageTitle from '../../util/getPageTitle';
 const Post = React.createClass({
 
   propTypes: {
-    entry: React.PropTypes.object.isRequired,
+    post: React.PropTypes.object.isRequired,
     isHydrated: React.PropTypes.bool.isRequired,
     fetchError: React.PropTypes.object,
   },
@@ -76,7 +76,7 @@ const Post = React.createClass({
   },
 
   renderHydrated() {
-    const {tweets, description, audio} = this.props.entry;
+    const {tweets, description, audio} = this.props.post;
 
     return (
       <div>
@@ -89,7 +89,7 @@ const Post = React.createClass({
 
   render() {
     const {isHydrated} = this.props;
-    const {title} = this.props.entry;
+    const {title} = this.props.post;
 
     return (
       <DocumentTitle title={getPageTitle(title)}>
@@ -97,7 +97,7 @@ const Post = React.createClass({
           <div className="entry-box">
             <h1 className="title">{title}</h1>
 
-            <MetaInfo post={this.props.entry} />
+            <MetaInfo post={this.props.post} />
           </div>
 
           {isHydrated ? this.renderHydrated() : <Loading />}

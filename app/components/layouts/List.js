@@ -8,7 +8,7 @@ import getPageTitle from '../../util/getPageTitle';
 const List = React.createClass({
 
   propTypes: {
-    entries: React.PropTypes.array.isRequired,
+    posts: React.PropTypes.array.isRequired,
     isLoading: React.PropTypes.bool.isRequired,
     fetchError: React.PropTypes.object,
   },
@@ -17,7 +17,7 @@ const List = React.createClass({
     // Only render a link to a post if it has content (tweets, description, etc)
     if (post.hasContent) {
       return (
-        <Link to="entry" params={{slug: post.slug}}>{post.title}</Link>
+        <Link to="post" params={{slug: post.slug}}>{post.title}</Link>
       );
     } else {
       return post.title;
@@ -25,7 +25,7 @@ const List = React.createClass({
   },
 
   renderPosts() {
-    const posts = this.props.entries.map((post) => {
+    const posts = this.props.posts.map((post) => {
       return (
         <li key={post.slug} className="entry-box">
           <h2 className="title">{this.maybeRenderLink(post)}</h2>
