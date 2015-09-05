@@ -1,3 +1,5 @@
+import React from 'react';
+
 import _ from 'lodash';
 
 const MEDIA_TYPE = 'media';

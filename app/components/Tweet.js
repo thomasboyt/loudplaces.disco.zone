@@ -1,3 +1,5 @@
+import React from 'react';
+
 import moment from 'moment';
 import Video from './Video';
 import Photo from './Photo';

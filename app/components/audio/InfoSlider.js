@@ -1,3 +1,5 @@
+import React from 'react';
+
 function leadingZero(num) {
   if (num < 10) {
     return `0${num}`;

@@ -1,3 +1,6 @@
+import React from 'react';
+import DocumentTitle from 'react-document-title';
+
 import Loading from '../Loading';
 import MetaInfo from '../MetaInfo';
 import Tweet from '../Tweet';

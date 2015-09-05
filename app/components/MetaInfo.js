@@ -1,3 +1,5 @@
+import React from 'react';
+
 import moment from 'moment';
 
 const DATE_STRING = 'ddd. MMMM Do, YYYY';
