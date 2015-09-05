@@ -22,7 +22,8 @@ export default function generateConfig(optimize) {
         'moment',
         'query-string',
         'r-dom',
-        'timeout-transition-group'
+        'timeout-transition-group',
+        'react-modal'
       ]
     },
 
@@ -56,4 +57,4 @@ export default function generateConfig(optimize) {
   };
 
   return config;
-};
+}
