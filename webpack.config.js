@@ -22,8 +22,6 @@ export default function generateConfig(optimize) {
         'moment',
         'query-string',
         'r-dom',
-        'remarkable',
-        'remarkable-jsx',
         'timeout-transition-group'
       ]
     },

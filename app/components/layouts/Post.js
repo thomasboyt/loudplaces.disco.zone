@@ -4,7 +4,6 @@ import DocumentTitle from 'react-document-title';
 import Loading from '../Loading';
 import MetaInfo from '../MetaInfo';
 import Tweet from '../Tweet';
-import Markdown from '../Markdown';
 import AudioLink from '../audio/AudioLink';
 
 import getPageTitle from '../../util/getPageTitle';
@@ -46,9 +45,8 @@ const Post = React.createClass({
     return (
       <span>
         <h3>Report</h3>
-        <div className="description">
-          <Markdown source={description} />
-        </div>
+        <div className="description"
+          dangerouslySetInnerHTML={{__html: description}} />
       </span>
     );
   },
@@ -79,12 +77,12 @@ const Post = React.createClass({
   },
 
   renderHydrated() {
-    const {tweets, description, audio} = this.props.post;
+    const {tweets, body, audio} = this.props.post;
 
     return (
       <div>
         {this.renderAudio(audio)}
-        {this.renderDescription(description)}
+        {this.renderDescription(body)}
         {this.renderTweets(tweets)}
       </div>
     );
