@@ -1,6 +1,6 @@
-This blog is built with [`nite-flights`](https://github.com/thomasboyt/nite-flights). To run:
+This blog is built with [Peridot](https://github.com/thomasboyt/peridot). To run:
 
 ```
 npm install
-./node_modules/.bin/nite-flights serve
+./node_modules/.bin/peridot serve
 ```
