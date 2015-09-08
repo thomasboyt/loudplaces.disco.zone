@@ -14,7 +14,8 @@ function isModifiedEvent(event) {
 
 const Photo = React.createClass({
   propTypes: {
-    media: React.PropTypes.object.isRequired
+    largeUrl: React.PropTypes.string.isRequired,
+    smallUrl: React.PropTypes.string.isRequired
   },
 
   getInitialState() {
@@ -42,10 +43,10 @@ const Photo = React.createClass({
   },
 
   renderModal() {
-    const media = this.props.media;
+    const {largeUrl} = this.props;
 
     const mediaStyle = {
-      background: `url(${media.media_url_https}:large) no-repeat center center`,
+      background: `url(${largeUrl}) no-repeat center center`,
       backgroundSize: 'contain'
     };
 
@@ -59,13 +60,12 @@ const Photo = React.createClass({
   },
 
   render() {
-    const media = this.props.media;
+    const {largeUrl, smallUrl} = this.props;
 
     return (
       <span>
-        <a href={`${media.media_url_https}:large`} key={media.id_str}
-          onClick={this.handleRequestOpen}>
-          <img src={`${media.media_url_https}:small`} />
+        <a href={largeUrl} onClick={this.handleRequestOpen}>
+          <img src={smallUrl} />
         </a>
         {this.renderModal()}
       </span>

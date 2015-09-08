@@ -4,6 +4,7 @@ import DocumentTitle from 'react-document-title';
 import Loading from '../Loading';
 import MetaInfo from '../MetaInfo';
 import Tweet from '../Tweet';
+import Photo from '../Photo';
 import AudioLink from '../audio/AudioLink';
 
 import getPageTitle from '../../util/getPageTitle';
@@ -16,20 +17,32 @@ const Post = React.createClass({
     fetchError: React.PropTypes.object,
   },
 
-  renderTweets(tweets) {
-    if (tweets.length === 0) {
+  renderMedia(media) {
+    if (media.length === 0) {
       return null;
     }
 
-    const rendered = tweets.map((tweet) => {
-      return (
-        <Tweet tweet={tweet} key={tweet.id_str} />
-      );
+    const rendered = media.map((media) => {
+      if (media.type === 'tweet') {
+        return (
+          <Tweet tweet={media.data} key={media.data.id_str} />
+        );
+      } else if (media.type === 'photo') {
+        return (
+          <div>
+            <p>
+              {media.data.caption}
+            </p>
+            <Photo largeUrl={media.data.url} smallUrl={media.data.url}
+              key={media.data.url} />
+          </div>
+        );
+      }
     });
 
     return (
       <span>
-        <h3>Tweets</h3>
+        <h3>Media</h3>
         <div className="tweets">
           {rendered}
         </div>
@@ -77,13 +90,13 @@ const Post = React.createClass({
   },
 
   renderHydrated() {
-    const {tweets, body, audio} = this.props.post;
+    const {media, body, audio} = this.props.post;
 
     return (
       <div>
         {this.renderAudio(audio)}
         {this.renderDescription(body)}
-        {this.renderTweets(tweets)}
+        {this.renderMedia(media)}
       </div>
     );
   },

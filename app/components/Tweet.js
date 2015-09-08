@@ -74,7 +74,12 @@ const Tweet = React.createClass({
 
     return media.map((media) => {
       if (media.type === 'photo') {
-        return <Photo media={media} key={media.id_str} />;
+        return (
+          <Photo
+            largeUrl={`${media.media_url_https}:large`}
+            smallUrl={`${media.media_url_https}:small`}
+            key={media.id_str} />
+        );
       } else if (media.type === 'video') {
         return <Video media={media} key={media.id_str} />;
       }

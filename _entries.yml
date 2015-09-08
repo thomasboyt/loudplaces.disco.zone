@@ -2,6 +2,16 @@
   location: "Saint Vitus"
   date: "2015-08-31"
 
+  media:
+    - photo: speedy/IMG_1119.jpg
+      caption: Aye Nako in action
+    - https://twitter.com/thomasABoyt/status/638563445584044032
+
+  body: |
+    This show was at a cool metal bar up in Greenpoint I'd been meaning to check out. Place ended up being great, even if it's a bit of a hike from the G (not nearly as long a walk as Baby's from the L, though).
+
+    I'd never been that impressed with Speedy Ortiz on record, but took a gamble on this show since it was $5, and they sound *so much better* live that I'm glad I did. Really dug their opener, Aye Nako, too.
+
 - title: "DFA Summer Hotdog #1 (w/ Holy Ghost!)"
   location: "Good Room"
   date: "2015-08-29"
@@ -18,7 +28,7 @@
 
     They didn't play anything new, which bummed me out a bit (it's been two years since their last record!), but they still sound great and have a killer live setup.
 
-  tweets:
+  media:
     - https://twitter.com/thomasABoyt/status/637838524293771264
     - https://twitter.com/thomasABoyt/status/637838784319606784
     - https://twitter.com/thomasABoyt/status/637859317207707648
@@ -32,7 +42,7 @@
 
     This was a far better show than I expected from Raw, other than a really depressing-to-watch Divas match with zero heat (especially after the solid-to-amazing women's matches at TakeOver). Seeing The New Day come out with Xavier Woods on a trombone, John Cena AA Jon Stewart, and STING OUT OF NOWHERE made this more than worth it.
 
-  tweets:
+  media:
     - https://twitter.com/thomasABoyt/status/635882578671706112
     - https://twitter.com/thomasABoyt/status/635883966759870464
     - https://twitter.com/thomasABoyt/status/635994161456521216
@@ -49,7 +59,7 @@
 
     From my floor seat, I couldn't see the ring particularly well, but I did luck out by being incredibly close to the entrance ramp. It was an awesome show, and the crowd noise in that room was incredible. I hadn't been to Barclays Center before, and I was glad to see they had nearly the capacity of MSG in a seemingly much-smaller space - every seat in the house seemed like it'd be a good one.
 
-  tweets:
+  media:
     - https://twitter.com/thomasABoyt/status/635223798070026240
     - https://twitter.com/thomasABoyt/status/635224319543611393
     - https://twitter.com/thomasABoyt/status/635231817147252737
@@ -77,7 +87,7 @@
       artist: High on Fire
       title: Snakes for the Divine
 
-  tweets:
+  media:
     - https://twitter.com/thomasABoyt/status/633805499096559616
     - https://twitter.com/thomasABoyt/status/633821543190147072
     - https://twitter.com/thomasABoyt/status/633822270662832129
@@ -100,7 +110,7 @@
       artist: Vince Staples
       title: Blue Suede
 
-  tweets:
+  media:
     - https://twitter.com/thomasABoyt/status/630870421420797952
     - https://twitter.com/thomasABoyt/status/630884636407820288
     - https://twitter.com/thomasABoyt/status/630885378841530368
@@ -120,7 +130,7 @@
       artist: Jamie xx
       title: Loud Places
 
-  tweets:
+  media:
     - https://twitter.com/thomasABoyt/status/630195574466347008
     - https://twitter.com/thomasABoyt/status/630238098820042752
     - https://twitter.com/thomasABoyt/status/630257936674201600
