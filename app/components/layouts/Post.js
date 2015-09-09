@@ -29,12 +29,11 @@ const Post = React.createClass({
         );
       } else if (media.type === 'photo') {
         return (
-          <div>
+          <div key={media.data.sizes.small}>
             <p>
               {media.data.caption}
             </p>
-            <Photo largeUrl={media.data.url} smallUrl={media.data.url}
-              key={media.data.url} />
+            <Photo largeUrl={media.data.sizes.large} smallUrl={media.data.sizes.small} />
           </div>
         );
       }
