@@ -2,11 +2,13 @@ import React from 'react';
 
 import moment from 'moment';
 
+import * as propTypes from '../propTypes';
+
 const DATE_STRING = 'ddd. MMMM Do, YYYY';
 
 const MetaInfo = React.createClass({
   propTypes: {
-    post: React.PropTypes.object.isRequired
+    post: propTypes.shortPost.isRequired
   },
 
   render() {

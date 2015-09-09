@@ -6,11 +6,12 @@ import Loading from '../Loading';
 import MetaInfo from '../MetaInfo';
 
 import getPageTitle from '../../util/getPageTitle';
+import * as propTypes from '../../propTypes';
 
 const List = React.createClass({
 
   propTypes: {
-    posts: React.PropTypes.array.isRequired,
+    posts: React.PropTypes.arrayOf(propTypes.shortPost).isRequired,
     isLoading: React.PropTypes.bool.isRequired,
     fetchError: React.PropTypes.object,
   },

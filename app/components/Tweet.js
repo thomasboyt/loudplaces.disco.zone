@@ -5,11 +5,12 @@ import Video from './Video';
 import Photo from './Photo';
 
 import parseTweetText from '../util/parseTweetText';
+import * as propTypes from '../propTypes';
 
 const Tweet = React.createClass({
 
   propTypes: {
-    tweet: React.PropTypes.object.isRequired,
+    tweet: propTypes.tweet.isRequired,
   },
 
   stripMediaEntities(original) {

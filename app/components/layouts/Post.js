@@ -8,11 +8,12 @@ import Photo from '../Photo';
 import AudioLink from '../audio/AudioLink';
 
 import getPageTitle from '../../util/getPageTitle';
+import * as propTypes from '../../propTypes';
 
 const Post = React.createClass({
 
   propTypes: {
-    post: React.PropTypes.object.isRequired,
+    post: propTypes.post.isRequired,
     isHydrated: React.PropTypes.bool.isRequired,
     fetchError: React.PropTypes.object,
   },

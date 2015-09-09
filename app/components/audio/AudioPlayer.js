@@ -2,7 +2,9 @@ import React from 'react';
 
 import {debounce} from 'lodash';
 import {connect} from 'react-redux';
+
 import {playAudio} from '../../actions/audio';
+import * as propTypes from '../../propTypes';
 
 import YouTubeAudio from './YouTubeAudio';
 import VolumeSlider from './VolumeSlider';
@@ -17,7 +19,7 @@ const updateSavedVolume = debounce((vol) => {
 
 const AudioPlayer = React.createClass({
   propTypes: {
-    audio: React.PropTypes.object
+    audio: propTypes.audio
   },
 
   getInitialState() {

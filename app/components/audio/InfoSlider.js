@@ -1,5 +1,7 @@
 import React from 'react';
 
+import * as propTypes from '../../propTypes';
+
 function leadingZero(num) {
   if (num < 10) {
     return `0${num}`;
@@ -10,7 +12,7 @@ function leadingZero(num) {
 
 const InfoSlider = React.createClass({
   propTypes: {
-    audio: React.PropTypes.object,
+    audio: propTypes.audio,
     elapsed: React.PropTypes.number,
     duration: React.PropTypes.number
   },

@@ -1,11 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
+
 import {playAudio} from '../../actions/audio';
 import canPlayYoutubeAudio from '../../util/canPlayYoutubeAudio';
+import * as propTypes from '../../propTypes';
 
 const AudioLink = React.createClass({
   propTypes: {
-    audio: React.PropTypes.object.isRequired,
+    audio: propTypes.audio.isRequired,
     children: React.PropTypes.node.isRequired,
 
     dispatch: React.PropTypes.func.isRequired
