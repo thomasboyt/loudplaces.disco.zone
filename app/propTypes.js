@@ -6,7 +6,9 @@ export const shortPost = T.shape({
   title: T.string.isRequired,
   date: T.string.isRequired,
   location: T.string.isRequired,
-  hasContent: T.bool.isRequired
+
+  hasBody: T.bool.isRequired,
+  hasMedia: T.bool.isRequired
 });
 
 // TODO
