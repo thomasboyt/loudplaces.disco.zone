@@ -26,7 +26,7 @@ const Wrapper = React.createClass({
       <div className="container">
         <header>
           <h1 className="blog-title">
-            <Link to="index">Loud Places</Link>
+            <Link to="/">Loud Places</Link>
           </h1>
 
           {this.state.canPlayAudio ? <AudioPlayer /> : null}

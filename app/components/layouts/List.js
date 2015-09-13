@@ -20,7 +20,7 @@ const List = React.createClass({
     // Only render a link to a post if it has content (tweets, description, etc)
     if (post.hasMedia || post.hasBody) {
       return (
-        <Link to="post" params={{slug: post.slug}}>{post.title}</Link>
+        <Link to={`entries/${post.slug}/`}>{post.title}</Link>
       );
     } else {
       return post.title;
