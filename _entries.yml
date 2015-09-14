@@ -1,3 +1,34 @@
+- title: "Empress Of"
+  location: "Music Hall of Williamsburg"
+  date: "2015-09-13"
+
+  audio:
+    - url: https://www.youtube.com/watch?v=iLDCjV5TsYc
+      title: How Do You Do It
+      artist: Empress Of
+
+- title: "Yonatan Gat / Innove Gnawa Band / Sunwatchers"
+  location: "Rough Trade NYC"
+  date: "2015-09-12"
+
+  audio:
+    - url: https://www.youtube.com/watch?v=7z8pbObQltc
+      title: East to West
+      artist: Yonatan Gat
+
+  media:
+    - https://twitter.com/thomasABoyt/status/642907456180461568
+    - https://twitter.com/thomasABoyt/status/642913653273063424
+    - https://twitter.com/thomasABoyt/status/642914881512079364
+    - https://twitter.com/thomasABoyt/status/642926105624735744
+
+  body: |
+    This may actually be the best show I see this year.
+
+    Sunwatchers was a great, drone-y jazz/punk band. They were way more entrancing than that description might imply. [Their first album](http://sunwatchers.bandcamp.com/album/tomb-howl) is worth a listen.
+
+    As for Innove Gwana Band, well, [this video](https://www.youtube.com/watch?v=JwtGNq6Evv8) will explain what they're about better than I can.
+
 - title: "The Juan MacLean / Guerilla Toss / HEIDEMANN"
   location: "Music Hall of Williamsburg"
   date: "2015-09-11"
