@@ -1,6 +1,27 @@
+- title: Carly Rae Jepsen
+  location: Irving Plaza
+  date: "2015-11-11"
+
+  media:
+    - https://twitter.com/thomasABoyt/status/664601835660058624
+    - https://twitter.com/thomasABoyt/status/664627892991746048
+    - https://twitter.com/thomasABoyt/status/664640931006648321
+
+- title: Screaming Females / Potty Mouth / Aye Nako
+  location: Music Hall of Williamsburg
+  date: "2015-11-08"
+
+  media:
+    - https://twitter.com/thomasABoyt/status/663584843947712512
+
 - title: Kendrick Lamar
   location: Terminal 5
   date: "2015-11-02"
+
+  media:
+    - https://twitter.com/thomasABoyt/status/661353660476080129
+    - https://twitter.com/thomasABoyt/status/661405521854013441
+    - https://twitter.com/thomasABoyt/status/661418491711500288
 
 - title: TOPS
   location: Music Hall of Williamsburg
@@ -10,13 +31,25 @@
   location: Cameo Gallery
   date: "2015-10-31"
 
+  media:
+    - https://twitter.com/thomasABoyt/status/660674835161423872
+    - https://twitter.com/thomasABoyt/status/660691079143030785
+    - https://twitter.com/thomasABoyt/status/660702548412731392
+    - https://twitter.com/thomasABoyt/status/660712443899985920
+
 - title: We Are Scientists
   location: Rough Trade NYC
   date: "2015-10-31"
 
+  media:
+    - https://twitter.com/thomasABoyt/status/660725676287348736
+
 - title: Joanna Gruesome / Aye Nako / King of Cats
   location: Rough Trade NYC
   date: "2015-10-30"
+
+  media:
+    - https://twitter.com/thomasABoyt/status/660299298018566144
 
 - title: Laced / The Men
   location: Shea Stadium
@@ -26,13 +59,24 @@
   location: Baby's All Right
   date: "2015-10-24"
 
+  media:
+    - https://twitter.com/thomasABoyt/status/658171975441981440
+
 - title: Courtney Barnett
   location: Baby's All Right
   date: "2015-10-24"
 
+  media:
+    - https://twitter.com/thomasABoyt/status/658067695246704640
+    - https://twitter.com/thomasABoyt/status/658105660270321664
+
 - title: Ezra Furman / Juan Waters / Slim Twig
   location: Knitting Factory
   date: "2015-10-14"
+
+  media:
+    - https://twitter.com/thomasABoyt/status/654532829460701184
+    - https://twitter.com/thomasABoyt/status/654532353373663232
 
 - title: Shopping
   location: Elvis Guesthouse
@@ -42,25 +86,47 @@
   location: Music Hall of Williamsburg
   date: "2015-10-07"
 
+  media:
+    - https://twitter.com/thomasABoyt/status/651915812396269568
+    - https://twitter.com/thomasABoyt/status/651942224515756032
+
 - title: FFS
   location: Terminal 5
   date: "2015-10-06"
+
+  media:
+    - https://twitter.com/thomasABoyt/status/651586499734040577
+    - https://twitter.com/thomasABoyt/status/651586114168471552
 
 - title: CHVRCHES
   location: Central Park SummerStage
   date: "2015-09-29"
 
+  media:
+    - https://twitter.com/thomasABoyt/status/649042084175998976
+
 - title: Hannibal Buress
   location: Knitting Factory
   date: "2015-09-20"
+
+  media:
+    - https://twitter.com/thomasABoyt/status/645798842823221248
 
 - title: Of Montreal
   location: Music Hall of Williamsburg
   date: "2015-09-18"
 
+  media:
+    - https://twitter.com/thomasABoyt/status/645036768341979136
+    - https://twitter.com/thomasABoyt/status/645073639419850752
+    - https://twitter.com/thomasABoyt/status/645073880558776320
+
 - title: "Young Thug"
   location: "Central Park SummerStage"
   date: "2015-09-17"
+
+  media:
+    - https://twitter.com/thomasABoyt/status/644670607582449664
 
 - title: "Empress Of"
   location: "Music Hall of Williamsburg"
