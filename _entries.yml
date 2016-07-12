@@ -1,10 +1,40 @@
+- title: 'The Whale Fat Follies'
+  location: 'The Taproot (Anchorage, AK)'
+  date: '2016-07-06'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/750909192429400065
+
+- title: 'Disclosure / Anderson Paak'
+  location: Forest Hills Stadium
+  date: '2016-06-18'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/744293795664171016
+    - https://twitter.com/thomasABoyt/status/744310626193907712
+    - https://twitter.com/thomasABoyt/status/744311598941114368
+    - https://twitter.com/thomasABoyt/status/744314182540070912
+    - https://twitter.com/thomasABoyt/status/744319956272160768
+    - https://twitter.com/thomasABoyt/status/744323305646264320
+    - https://twitter.com/thomasABoyt/status/744354111534022656
+
 - title: 'Steve Gunn / Yonatan Gat / Cat Worms'
   location: Music Hall of Williamsburg
   date: '2016-06-09'
 
+  media:
+    - https://twitter.com/thomasABoyt/status/741082244236861440
+    - https://twitter.com/thomasABoyt/status/741083654961672193
+    - https://twitter.com/thomasABoyt/status/741091161109090304
+    - https://twitter.com/thomasABoyt/status/741091503553019904
+    - https://twitter.com/thomasABoyt/status/741091671295725568
+
 - title: 'MBMBAM'
   location: "Playstation Theater"
   date: '2016-06-04'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/739189222498783232
 
 - title: 'Bully / LVL UP'
   location: "Arlene's Grocery"
@@ -13,6 +43,12 @@
 - title: 'Ring of Honor: War of the Worlds Tour'
   location: Terminal 5
   date: '2016-05-14'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/731620977851928576
+    - https://twitter.com/thomasABoyt/status/731625158146990080
+    - https://twitter.com/thomasABoyt/status/731671296510136320
+    - https://twitter.com/thomasABoyt/status/731671487216812032
 
 - title: Comedy Bang Bang
   location: Gramercy Theatre
@@ -26,21 +62,45 @@
   location: Cake Shop
   date: '2016-04-23'
 
+- title: Prince Rama
+  location: Rough Trade
+  date: '2016-04-20'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/722991640944742400
+    - https://twitter.com/thomasABoyt/status/723002211681341440
+    - https://twitter.com/thomasABoyt/status/723189937227608064
+
 - title: The Dollop
   location: The Bell House
   date: '2016-04-17'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/721846069714423808
 
 - title: SOPHIE
   location: Music Hall of Williamsburg
   date: '2016-04-09'
 
+  media:
+    - https://twitter.com/thomasABoyt/status/719008140763742209
+
 - title: Savages
   location: Warsaw
   date: '2016-03-29'
 
+  media:
+    - https://twitter.com/thomasABoyt/status/714988767875088384
+    - https://twitter.com/thomasABoyt/status/715018470598057984
+    - https://twitter.com/thomasABoyt/status/715023517004206082
+
 - title: 'WWE Raw'
   location: 'Barclays Center'
   date: '2016-03-28'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/714581185352056834
+    - https://twitter.com/thomasABoyt/status/714581185352056834
 
 - title: Petite Noir
   location: "Baby's All Right"
@@ -745,6 +805,6 @@
   body: 'This was my first concert in NYC, and it was ridiculous and awesome. There were like three openers, and by the time Andrew came out on stage, he was plastered. He ended up playing an hour set of him banging on a keyboard while going in and out of "Party Hard." Totally awesome. I went with several cool people from Hacker School, some of whom I still hang out with today!'
 - date: '2012-03-22'
   title: Justice
-  location: The Tabernacle (ATL)
+  location: The Tabernacle (Atlanta, GA)
   body: "This was like the first actual concert I ever went to. It was cool. The Tabernacle is a super dope venue and I'd love to go back for another show sometime. I wish NYC had venues like that - Terminal 5 is sorta close, but their balcony isn't nearly as awesome. \n\n(update: after I originally wrote this entry, I went to my first show at Webster Hall, which is similarly pretty, but not nearly as awesome in general)"
 
