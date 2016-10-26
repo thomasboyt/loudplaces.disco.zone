@@ -1,3 +1,15 @@
+- title: 'White Lung'
+  location: 'Villain'
+  date: '2016-10-15'
+
+- title: 'Afropunk Brooklyn'
+  location: 'Commodore Barry Park'
+  date: '2016-08-27'
+
+- title: 'NXT TakeOver Brooklyn II'
+  location: 'Barclays Center'
+  date: '2016-08-20'
+
 - title: 'Wild Beasts'
   location: "Baby's All Right"
   date: '2016-08-10'
@@ -38,7 +50,7 @@
     - https://twitter.com/thomasABoyt/status/744323305646264320
     - https://twitter.com/thomasABoyt/status/744354111534022656
 
-- title: 'Steve Gunn / Yonatan Gat / Cat Worms'
+- title: 'Steve Gunn / Yonatan Gat'
   location: Music Hall of Williamsburg
   date: '2016-06-09'
 
