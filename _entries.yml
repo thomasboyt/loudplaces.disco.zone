@@ -6,13 +6,39 @@
   location: La Boom
   date: '2016-12-10'
 
+  body: |
+    This was very good wrestling. Finally got to see Chris Hero live, along with Ricochet and Cody Rhodes (who had a way better match than I was expecting).
+
+  media:
+    - https://twitter.com/thomasABoyt/status/807721357509296128
+    - https://twitter.com/thomasABoyt/status/807723045171372032
+    - https://twitter.com/thomasABoyt/status/807766205528502272
+
 - title: Bon Iver
   location: Pioneer Works
   date: '2016-12-07'
 
+  media:
+    - https://twitter.com/thomasABoyt/status/806673376072892417
+    - https://twitter.com/thomasABoyt/status/806707163259371520
+
 - title: NXT Live
   location: The Theater at Madison Square Garden
   date: '2016-11-17'
+
+  body: |
+    Got a really incredible seat for this at the last moment. The NXT roster's still pretty stacked right now even if the TV show is a bit stale, so every match was pretty great. Surprise of the night was a super good match between Oney Lorcan and Elias Samson?
+
+  media:
+    - https://twitter.com/thomasABoyt/status/799007754887327746
+    - https://twitter.com/thomasABoyt/status/799049175035953153
+    - https://twitter.com/thomasABoyt/status/799058236791996416
+    - https://twitter.com/thomasABoyt/status/799060653554225153
+    - https://twitter.com/thomasABoyt/status/799075198397980672
+    - https://twitter.com/thomasABoyt/status/799079964645687296
+    - https://twitter.com/thomasABoyt/status/799082659355967497
+    - https://twitter.com/thomasABoyt/status/799082996980678656
+    - https://twitter.com/thomasABoyt/status/799090051950977025
 
 - title: 'Seu Jorge'
   location: 'Town Hall'
@@ -22,13 +48,22 @@
   location: 'Music Hall of Williamsburg'
   date: '2016-11-09'
 
+  media:
+    - https://twitter.com/thomasABoyt/status/796584794297659392
+
 - title: 'Screaming Females'
   location: 'Villain'
   date: '2016-11-05'
 
+  media:
+    - https://twitter.com/thomasABoyt/status/795110229260247040
+
 - title: 'Kero Kero Bonito'
   location: 'Music Hall of Williamsburg'
   date: '2016-11-02'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/794049168138498048
 
 - title: 'Oh, Hello'
   location: 'The Lyceum Theater'
@@ -38,17 +73,63 @@
   location: 'Music Hall of Williamsburg'
   date: '2016-10-27'
 
+  media:
+    - https://twitter.com/thomasABoyt/status/791839600411115520
+    - https://twitter.com/thomasABoyt/status/791838944027607040
+
 - title: 'White Lung'
   location: 'Villain'
   date: '2016-10-15'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/787683978975318016
+
+- title: 'The Roots Picnic'
+  location: 'Bryant Park'
+  date: '2016-10-02'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/782667925551538178
+    - https://twitter.com/thomasABoyt/status/782671716686368768
+    - https://twitter.com/thomasABoyt/status/782675823136481285
+    - https://twitter.com/thomasABoyt/status/782681213949575168
+    - https://twitter.com/thomasABoyt/status/782685501732126720
+    - https://twitter.com/thomasABoyt/status/782687763598569472
+    - https://twitter.com/thomasABoyt/status/782701627610370048
+    - https://twitter.com/thomasABoyt/status/782734904937373696
+    - https://twitter.com/thomasABoyt/status/782735349072134144
+    - https://twitter.com/thomasABoyt/status/782746532923736064
+    - https://twitter.com/thomasABoyt/status/782751473335693312
+    - https://twitter.com/thomasABoyt/status/782753391931973632
+    - https://twitter.com/thomasABoyt/status/782761975726084096
+
+- title: 'Dan Deacon'
+  location: 'XOXO Outpost'
+  date: '2016-09-12'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/775185119279656960
 
 - title: 'Afropunk Brooklyn'
   location: 'Commodore Barry Park'
   date: '2016-08-27'
 
+  media:
+    - https://twitter.com/thomasABoyt/status/770017945120546816
+    - https://twitter.com/thomasABoyt/status/770045319992250368
+    - https://twitter.com/thomasABoyt/status/770065752288292864
+
 - title: 'NXT TakeOver Brooklyn II'
   location: 'Barclays Center'
   date: '2016-08-20'
+
+  media:
+  - https://twitter.com/thomasABoyt/status/767124241313652736
+  - https://twitter.com/thomasABoyt/status/767127538791485440
+  - https://twitter.com/thomasABoyt/status/767158340594044929
+  - https://twitter.com/thomasABoyt/status/767171817467420672
+  - https://twitter.com/thomasABoyt/status/767207791501176832
+  - https://twitter.com/thomasABoyt/status/767208062763630592
 
 - title: 'Wild Beasts'
   location: "Baby's All Right"
@@ -58,17 +139,34 @@
   location: "Baby's All Right"
   date: '2016-08-03'
 
+  media:
+    - https://twitter.com/thomasABoyt/status/761047116873478144
+
 - title: 'Nice as Fuck'
   location: 'Bowery Ballroom'
   date: '2016-08-01'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/760323273280323584
+    - https://twitter.com/thomasABoyt/status/760292797601738752
 
 - title: 'Radiohead'
   location: 'Madison Square Garden'
   date: '2016-07-27'
 
+  media:
+    - https://twitter.com/thomasABoyt/status/758488159521009664
+
 - title: 'PS1 Warm Up: Clams Casino / AJ Tracey'
   location: 'MoMA PS1'
   date: '2016-07-16'
+
+  media:
+    - https://twitter.com/thomasABoyt/status/754408483320201216
+    - https://twitter.com/thomasABoyt/status/754415628493189120
+    - https://twitter.com/thomasABoyt/status/754435649076420608
+    - https://twitter.com/thomasABoyt/status/754445190149144576
+    - https://twitter.com/thomasABoyt/status/754451470339235840
 
 - title: 'The Whale Fat Follies'
   location: 'The Taproot (Anchorage, AK)'
